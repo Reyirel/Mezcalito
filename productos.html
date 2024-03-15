@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/productos.css">
+    <title>Menú</title>
+</head>
+<body>
+
+    <div class="navegacion">
+        <div class="logo">
+            <img src="/images/image.png" alt="logo">
+        </div>
+        <div class="enlaces">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#ubicacion">Ubicación</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
+                <li><a href="index.html#comentarios">Comentarios</a></li>
+                <li><a href="index.html#contactanos">Contacto</a></li>
+                <li><a class="boton" id="reservau">Reservacion</a></li>
+            </ul>
+        </div>
+          </div>
+          <div class="menu-icon">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+    </div>
+
+    <section class="products" id="Products">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h1>Nuestros Productos</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="filter-buttons">
+                    <ul id="filter-btns">
+                        <li class="active"data-target="all" id="mainMenu">Todos</li>
+                        <li data-target="Recomended" id="mainMenu">Recomendados</li>
+                        <li data-target="Mezcales" id="mainMenu">Mezcales</li>
+
+                        <li data-target="Snacks" id="mainMenu">Snacks</li>
+                        <li data-target="Best" id="mainMenu">Más pedidos</li>
+                        
+                        <br><br>
+                        <li data-target="Brandy">Brandy</li>
+                        <li data-target="Cerveza">Cerveza</li>
+                        <li data-target="Champagne">Champagne</li>
+                        <li data-target="Cocteleria">Coctelería</li>
+                        <li data-target="Cognac">Cognac</li>
+                        <li data-target="Flameos">Flameos</li>
+                        <li data-target="Ron">Ron</li>
+                        <li data-target="Tequila">Tequila</li>
+                        <li data-target="Vodka">Vodka</li>
+                        <li data-target="Whisky">Whisky</li>
+                        <li data-target="Otros">Otros</li>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="products-content">
+  
+                    <div class="item" data-id="Recomended" data-id2="Tequila">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/teq_rep.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Tradicional</h2>
+                                    <div class="size">
+                                        <span>Reposado</span>
+                                        <span>Cristalino</span>   
+                                        <span>Plata</span>   
+                                    </div>
+                                    <div class="color">
+                                        <h3>Copa o botella</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+  
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/burguer.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Hamburguesas</h2>
+                                    <div class="size">
+                                        <span>Arrachera</span>
+                                        <span>Pollo Crunch</span>
+                                        <span>Camarón</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Acompañadas con papas</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+  
+                    <div class="item" data-id="Best" data-id2="Vodka">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/Smirnoff.jpg">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Smirnoff</h2>
+                                    <div class="size">
+                                        <span>Tamarindo</span>
+                                        <span>Original</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+  
+                    <div class="item" data-id="Best" data-id2="Cocteleria">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/cantarito.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Cantarito</h2>
+                                    <div class="size">
+                                        <!-- <span>Arrachera</span>
+                                        <span>Pollo Crunch</span>
+                                        <span>Camaron</span> -->
+                                    </div>
+                                    <div class="color">
+                                        <!-- <h3>Acompañadas con papas</h3> -->
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+  
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/sopes.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Sopes</h2>
+                                    <div class="size">
+                                        <span>Queso</span>
+                                        <span>Pollo</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Orden de 6 piezas</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+  
+                    <div class="item" data-id="Recomended" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/400Conejos.jpg">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>400 Conejos</h2>
+                                    <div class="size">
+                                        <span>Joven</span>
+                                        <span>Reposado</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Cocteleria">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/pina.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Piña Colada</h2>
+                                    <!-- <div class="size">
+                                        <span>Joven</span>
+                                        <span>Reposado</span>
+                                    </div> -->
+                                    <div class="color">
+                                        <h3>Coctelería</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Recomended" data-id2="Brandy">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/torres.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Torres</h2>
+                                    <div class="size">
+                                        <span>V</span>
+                                        <span>X</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Copa o botella <br> Brandy</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Cerveza">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/ultra.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Ultra</h2>
+                                    <div class="size">
+                                        <span>??? ml</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella o hielerazo <br>Cerveza</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Recomended" data-id2="Vodka">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/absolut.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Absolut Vodka</h2>
+                                    <div class="size">
+                                        <span>Azul</span>
+                                        <!-- <span>Two souls</span>
+                                        <span>18</span> -->
+                                    </div>
+                                    <!-- <div class="color">
+                                        <h3>Botella <br>Whisky</h3>
+                                    </div> -->
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Cerveza">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/hielerazo.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Hielerazo</h2>
+                                    <div class="size">
+                                        <span>9 botellas</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Cerveza</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Recomended" data-id2="Whisky">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/johnnie.jpg">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Johnnie Walker</h2>
+                                    <div class="size">
+                                        <span>Black Label</span>
+                                        <span>Red Label</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella o copa <br>Whisky</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/combo_mini.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Combo mini</h2>
+                                    <div class="size">
+                                        <span>Arrachera</span>
+                                        <span>Camarón</span>
+                                        <span>Pollo</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>4 hamburguesas, aros de cebolla y papas fritas</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/Dedos-de-queso.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Dedos de queso</h2>
+                                    <div class="size">
+                                        <span>6 piezas</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Snacks</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Cerveza">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/heineken.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>heineken</h2>
+                                    <div class="size">
+                                        <span>??? ml</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella o hielerazo <br>Cerveza</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/aros_cebolla.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Aros de cebolla</h2>
+                                    <div class="size">
+                                        <span>12 piezas</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Deliciosos aros de cebolla crujientes.
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Snacks">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/boneless.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Boneless</h2>
+                                    <div class="size">
+                                        <span>180 grs</span>
+                                        <span>300 grs</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Parmesano, BBQ, Bufalo, Bufalo hot, Mango habanero.
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Champagne">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/Moet-Brut.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Moet Brut</h2>
+                                    <div class="size">
+                                        <span>??? ml</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella o hielerazo <br>Champagne</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/montelobos.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Montelobos</h2>
+                                    <div class="size">
+                                        <span>750 ml</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella <br>Mezcal</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/espada_dorada.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Espada Dorada</h2>
+                                    <div class="size">
+                                        <span>Joven</span>
+                                        <span>Reposado</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella <br>Mezcal</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/ojo_tigre.webp">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Ojo de tigre</h2>
+                                    <div class="size">
+                                        <span>Botella</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Mezcal Artesanal</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Best" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/mezcalunion750ml.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Mezcal Unión Joven</h2>
+                                    <div class="size">
+                                        <span>Botella</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Mezcal Artesanal</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Recomended" data-id2="Mezcales">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/cantona.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Cantona</h2>
+                                    <div class="size">
+                                        <span>1 litro</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Botella</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Cognac">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/martel-vsop.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Martel V.S.O.P.</h2>
+                                    <div class="size">
+                                        <span>Botella</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Cognac</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-id="Cognac">
+                        <div class="inner">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="img/moet-ice.png">
+                                </div>
+                                <div class="contentBox">
+                                    <h2>Moet Ice</h2>
+                                    <div class="size">
+                                        <span>Botella</span>
+                                    </div>
+                                    <div class="color">
+                                        <h3>Cognac</h3>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contactanos">
+        <div class="footer__redes">
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+        <div class="footer__contacto">
+            <p>Numero de Telefono: 771489635</p>
+            
+            <p>Correo Electronico: ua56872@uaeh.edu.mx</p>
+    
+            <p>© 2021 Todos los derechos reservados | Diseñado por <a href="https://www.facebook.com/eduardo.martinez.5810"
+                    target="_blank">Equipo Mezcalito</a></p>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+     
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="El Mezcalito es el mejor bar de la ciudad para disfrutar de bebidas exóticas, buena música y diversión sin fin. ¡Ven a visitarnos!">
+    <meta name="keywords" content="bar, El Mezcalito, bebidas exóticas, música en vivo, diversión, noche">
+    <meta name="robots" content="index,follow">
+
+    <!-- estilos -->
+
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- widgets -->
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- icono de la pagina -->
+    <link rel="icon" href="/images/image.png">
+
+    <!-- titulo de la pagina -->
+    <title>El mezcalito</title>
+</head>
+
+<body>
+    <div class="navegacion">
+        <div class="logo">
+            <img src="/images/m1.png" alt="logo">
+        </div>
+        <div class="enlaces">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#contactanos">Contacto</a></li>
+                <li><a href="Reservaciones.php" class="boton" id="reservau">Reservación</a></li>
+
+            </ul>
+        </div>
+        <div class="menu-icon">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+    </div>
+
+    <div class="main">
+
+
+        <section class="inicio" id="inicio">
+            <div class="inicio__texto">
+                <h1 data-aos="fade-right" data-aos-duration="1000">El Mezcalito</h1>
+                <p data-aos="fade-right" data-aos-duration="1200">Descubre una auténtica experiencia de sabores,
+                    donde cada trago es una fiesta para tus sentidos.
+                </p>
+            </div>
+            <div class="inicio__imagen" data-aos="fade-left" data-aos-duration="1100">
+                <img src="/images/nuestro-mezcal.png" alt="imagen1">
+            </div>
+        </section>
+
+        <section class="inicio__2">
+            <div class="inicio__2__texto">
+                <div class="texto" data-aos="fade-down" data-aos-duration="1000">
+                    <h1>¡Bienvenidos a Mezcalito!</h1>
+                    <br>
+                    <span>Donde nos encanta crear experiencias únicas y divertidas. Ven y visitanos</span>
+                </div>
+                <div class="texto" data-aos="fade-down" data-aos-duration="1500">
+                    <p>Somos un bar auténtico y lleno de sabor, donde encontrarás una amplia selección de mezcales,
+                        cocteles y cervezas mientras disfrutas de una maravillosa vista desde la terraza.
+                        Nos enorgullece ofrecer una experiencia única y divertida que invita a nuestros clientes
+                        a relajarse y disfrutar de su bebida favorita.</p>
+                </div>
+                <div class="texto" id="texto-2" data-aos="fade-down" data-aos-duration="1900">
+                    <p>Ya sea que estés buscando una noche de fiesta con tus amigos o simplemente quieras disfrutar de
+                        un trago tranquilo después del trabajo, en El Mezcalito encontrarás lo que necesitas. Nuestro
+                        bar es el lugar perfecto para relajarte y disfrutar de buena música, buena comida y bebidas de
+                        calidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <div class="reservacion__texto">
+                <h2 data-aos="zoom-in" data-aos-duration="700">Nuestros Productos</h2>
+                <h3 data-aos="zoom-in" data-aos-duration="1100">Conoce todo lo que ofrecemos especialmente para tí.</h3>
+            </div>
+            <section class="products" id="Products">
+                <div class="container">
+                    <div class="row">
+                        <div class="products-content">
+
+                            <div class="item" data-id="Snacks" data-aos="fade-down" data-aos-duration="600">
+                                <div class="inner">
+                                    <div class="card">
+                                        <div class="imgBox">
+                                            <img src="img/snacks.png">
+                                        </div>
+                                        <div class="contentBox">
+                                            <h2>SNACKS</h2>
+                                            <div class="color">
+                                                <h3>Los mejores snacks para acompañar tus bebidas favoritas.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item" data-id="Best" data-aos="fade-down" data-aos-duration="1000">
+                                <div class="inner">
+                                    <div class="card">
+                                        <div class="imgBox">
+                                            <img src="img/botellas.png">
+                                        </div>
+                                        <div class="contentBox">
+                                            <h2>BEBIDAS</h2>
+                                            <div class="color">
+                                                <h3>Contamos con solo lo mejor, al mejor precio.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item" data-id="Recomended" data-aos="fade-down" data-aos-duration="1200">
+                                <div class="inner">
+                                    <div class="card">
+                                        <div class="imgBox">
+                                            <img src="img/cocteles.png">
+                                        </div>
+                                        <div class="contentBox">
+                                            <h2>PREPARADOS</h2>
+                                            <div class="color">
+                                                <h3>Una amplia variedad de bebidas alcoholicas preparadas, originales y
+                                                    de gran calidad.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="productos.html"><button class="menumas">Mostrar todo...</button></a>
+        </section>
+
+        <section class="galeria" id="galeria">
+            <div class="cambio" id="cerrar-contenedor">
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+
+            <div class="fotosZOOM">
+                <div class="imagens" data-aos="fade-up" data-aos-duration="600">
+                    <img id="myImage1" src="images/Galeria (1).jpg" alt="Imagen 1">
+                    <div class="overlay">
+                        <p>Atractivo<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+
+                <div class="imagens" data-aos="fade-up" data-aos-duration="1000">
+                    <img id="myImage2" src="images/Galeria (2).jpg" alt="Imagen 2">
+                    <div class="overlay">
+                        <p>Refrescante<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+                <div class="imagens">
+                    <img id="myImage3" src="images/Galeria (3).jpg" alt="Imagen 3" data-aos="fade-up"
+                        data-aos-duration="1400">
+                    <div class="overlay">
+                        <p>Elegante<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button>
+                    </div>
+                    </p>
+                </div>
+                <div class="imagens">
+                    <img id="myImage4" src="images/Galeria (4).jpg" alt="Imagen 4" data-aos="fade-up"
+                        data-aos-duration="600">
+                    <div class="overlay">
+                        <p>Divertido<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+                <div class="imagens">
+                    <img id="myImage5" src="images/Galeria (5).jpg" alt="Imagen 5" data-aos="fade-up"
+                        data-aos-duration="1000">
+                    <div class="overlay">
+                        <p>Cómodo<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+                <div class="imagens">
+                    <img id="myImage6" src="images/Galeria (6).jpg" alt="Imagen 6" data-aos="fade-up"
+                        data-aos-duration="1400">
+                    <div class="overlay">
+                        <p>Variedad<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+                <div class="imagens">
+                    <img id="myImage7" src="images/Galeria (7).jpg" alt="Imagen 4" data-aos="fade-up"
+                        data-aos-duration="600">
+                    <div class="overlay">
+                        <p>Acogedor<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+                <div class="imagens imagen-doble">
+                    <img id="myImage8" src="images/Galeria (8).jpg" alt="Imagen 5" data-aos="fade-up"
+                        data-aos-duration="1000">
+                    <div class="overlay">
+                        <p>Animado<button class="zoom-button">
+                                <ion-icon class="zoom-icon" name="resize-outline"></ion-icon>
+                            </button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-imag">
+                <span></span>
+                <img src="images/Galeria (1).jpg">
+            </div>
+        </section>
+
+
+        <section class="eventos" id="eventos">
+            <div class="eventos__titulo">
+                <h1>Eventos</h1>
+            </div>
+            <div class="eventos__cuadro1" data-aos="fade-right" data-aos-duration="1000">
+                <div class="eventos_cuadro1_titulo">
+                    <h2>¡El Mezcalito!</h2>
+                </div>
+                <div class="eventos_cuadro1_texto">
+                    <p>En nuestro bar, siempre hay algo emocionante sucediendo. Ya sea que estés buscando una noche de
+                        karaoke, una noche de música en vivo o simplemente una noche de diversión con amigos, ¡tenemos
+                        lo que necesitas!</p>
+                </div>
+            </div>
+            <div class="eventos__cuadro2" data-aos="fade-left" data-aos-duration="1500">
+                <div class="eventos_cuadro2_titulo">
+                    <h2>Noches de música en vivo en El Mezcalito</h2>
+                </div>
+                <div class="eventos_cuadro2_texto">
+                    <p>Si eres un amante de la música en vivo, no te pierdas nuestras noches de conciertos en El
+                        Mezcalito.</p>
+                </div>
+            </div>
+            <div class="fb-page" data-href="https://web.facebook.com/profile.php?id=100078027001362&_rdc=1&_rdr"
+                data-tabs="timeline" data-width="480" data-height="680" data-small-header="false"
+                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            </div>
+
+            <div class="eventos__cuadro3" data-aos="fade-right" data-aos-duration="1900">
+                <div class="eventos_cuadro3_titulo">
+                    <h2>Tacos y tequila</h2>
+                </div>
+                <div class="eventos_cuadro3_texto">
+                    <p>Hay algo mejor que un buen taco y una margarita? Únete a nosotros.
+                        ¡No te pierdas esta fiesta de sabor y diversión!</p>
+                </div>
+            </div>
+                  
+        </section>
+
+
+        <section class="reservacion" id="reservacion">
+            <div class="reservacion__texto">
+                <h2 data-aos="zoom-in" data-aos-duration="700">Reservación</h2>
+                <h3 data-aos="zoom-in" data-aos-duration="1100">Realiza tu reservación y aparta los mejores lugares para
+                    tu grupo.</h3>
+                <!-- <button onclick="reserButon()" data-aos="zoom-in" data-aos-duration="1600">Reservar</button>-->
+                <a href="Reservaciones.php"><button data-aos="zoom-in" data-aos-duration="1600">Reservar</button></a>
+            </div>
+        </section>
+
+        <section class="comentarios" id="comentarios">
+            <div class="comentarios__fondo">
+                <div class="comentarios__titulo" data-aos="fade-right" data-aos="fade-right">
+                    <h1>Comentarios</h1>
+                </div>
+                <div class="comentarios__texto" data-aos="fade-right" data-aos-duration="800">
+                    <p> En nuestra empresa valoramos mucho la opinión de nuestros clientes, por lo que tus comentarios y
+                        sugerencias son
+                        muy importantes para nosotros. Creemos que escuchar lo que tienes que decir nos permite mejorar
+                        y ofrecer un
+                        mejor servicio. Por eso, si tienes algún comentario o sugerencia sobre nuestros productos o
+                        servicios, no dudes
+                        en hacérnoslo saber. Estamos siempre abiertos a recibir tu opinión y a trabajar en conjunto para
+                        hacer de nuestra
+                        empresa una mejor opción para ti.</p>
+                    <br>
+                    <p>¡Gracias por confiar en nosotros!</p>
+                </div>
+            </div>
+            <div class="comentarios__formulario">
+                <form action="./php/sugerencias.php" method="POST">
+                    <label for="nombre2" data-aos="fade-left" data-aos-duration="700">Nombre:</label>
+                    <input type="text" id="nombre2" name="nombre2" required data-aos="fade-left"
+                        data-aos-duration="700">
+                    <br><br>
+                    <label for="redsocial2" data-aos="fade-left" data-aos-duration="900">Facebook:</label>
+                    <input type="text" id="facebook" name="facebook" data-aos="fade-left" data-aos-duration="900">
+                    <br><br>
+                    <label for="instagram2" data-aos="fade-left" data-aos-duration="1100">Instagram:</label>
+                    <input type="text" id="instagram2" name="instagram2" data-aos="fade-left" data-aos-duration="1100">
+                    <br><br>
+                    <label for="comentario2" data-aos="fade-left" data-aos-duration="1300">Comentario:</label>
+                    <textarea id="comentario2" name="comentario2" rows="4" cols="50" required data-aos="fade-left"
+                        data-aos-duration="1300"></textarea>
+                    <br><br>
+                    <button>Publicar comentario</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section class="ubicacion" id="ubicacion">
+            <div class="ubicacion__texto" data-aos="fade-right" data-aos-duration="900">
+                <h2>Ubicación:</h2>
+                <br>
+                <p>Si buscas un lugar con un ambiente relajado y buena música para pasar una noche agradable, no puedes
+                    perderte el bar "El Mezcalito" en Tula de Allende.</p>
+                <br>
+                <p>Melchor Ocampo es la calle principal en el centro de Tula de Allende. La calle es ancha y cuenta con
+                    dos carriles en cada dirección, lo que la hace una vía importante para el tráfico vehicular en la
+                    zona.</p>
+                <br>
+                <h3>¡Disfruta de tu visita al bar y terraza "El Mezcalito"!</h3>
+                <button>Como llegar</button>
+            </div>
+            <div class="ubicacion__mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.8234569685077!2d-99.3398235!3d20.0532621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d22d113180a41d%3A0x6e4ade7548ba89d9!2sCalz%20Melchor%20Ocampo%2024%2C%20Centro%2C%2042800%20Tula%20de%20Allende%2C%20Hgo.%2C%20M%C3%A9xico!5e0!3m2!1sen!2sus!4v1649263024294!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-left"
+                    data-aos-duration="1100"></iframe>
+            </div>
+        </section>
+
+
+        <footer id="contactanos">
+            <div class="footer__redes">
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <div class="footer_logo"> <img src="images/m1.png" alt=""></div>
+            <div class="footer__contacto">
+                <p>Numero de Telefono: 771489635</p>
+
+                <p>Correo Electronico: ua56872@uaeh.edu.mx</p>
+
+                <p>© 2023 Todos los derechos reservados | Diseñado por <a
+                        href="https://www.facebook.com/eduardo.martinez.5810" target="_blank">Equipo Mezcalito</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <script src="js/galeria2.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/menu.js"></script>
+
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Facebook -->
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>

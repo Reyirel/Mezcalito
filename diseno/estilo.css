@@ -1,0 +1,1146 @@
+* {
+  margin: 0;
+}
+body {
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+
+@font-face {
+  font-family: "GreatVictorian";
+  src: url(font/GreatVictorian1.otf);
+}
+
+@font-face {
+  font-family: "Cusivefont";
+  src: url(font/CursiveSans.ttf);
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src: url(font/Sacramento.ttf);
+}
+
+.reserva {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*Este es el color de fondo que se aplica cuando se abre reservaciones*/
+  display: flex;
+}
+
+@keyframes gradientFONDOresv {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.lineasB {
+  /*lineas de fondo*/
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.lineasB span {
+  position: relative;
+  width: 1px;
+  height: 60px;
+  background-color: rgb(255, 127, 0);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgb(255, 127, 0) 44, 0 0 50px rgb(255, 127, 0) 0 0 100px rgb(255, 127, 0);
+  animation: animatelineasB 16s linear infinite;
+  animation-duration: calc(209s / var(--i));
+  margin-right: auto;
+}
+
+.lineasB span:nth-child(even) {
+  background-color: #e2293f;
+  box-shadow: 0 0 0 10px #e2293f  44, 0 0 50px #e2293f 0 0 100px #e2293f;
+}
+
+@keyframes animatelineasB {
+  0% {
+    transform: translateY(115vh) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.66);
+  } /*el-10vh es donde llegan*/
+}
+
+.card {
+  transition: 0.5s;
+  position: absolute;
+  width: 87.1%;
+  height: 82.1vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-shadow: -5px 5px 10px rgba(172, 25, 42, 0.1),
+    5px -5px 10px rgba(172, 25, 42, 0.1);
+  font-size: 15px;
+}
+
+.card .lines {
+  position: absolute;
+  inset: 0;
+  background-color: #35000d; /*Color del fondo por donde pasa el efecto del contorno*/
+  overflow: hidden;
+}
+.card .lines::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 40vh;
+  background: linear-gradient(
+    transparent,
+    rgb(255, 127, 0),
+    rgb(255, 127, 0),
+    rgb(255, 127, 0),
+    transparent
+  );
+  animation: animatefondo001 8.2s linear infinite;
+}
+
+@keyframes animatefondo001 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.fondocompleto {
+  /*Son tanto el lado derecho como el izquierdo*/
+  content: " ";
+  inset: 2px;
+  position: absolute;
+  display: grid; /*elementos continúan mostrándose uno de bajo del otro*/
+  grid-template-columns: 35% 65%; /*Son dos columnas*/
+    background-color: #04020a;
+
+}
+
+.datosCliente,
+.seleccionMesa {
+  height: 100%;
+}
+
+.datosCliente {
+  background-color: #04020a;
+  text-align: center;
+}
+
+.formularioCliente {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 4%;
+  height: auto;
+  width: auto;
+}
+.formularioCliente input {
+  width: 60%;
+  height: 24px;
+
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid rgb(65, 65, 65); /*Linea del input*/
+  caret-color: #fae3e5; /*Color de la linea "|" al iniciar a escribir*/
+  color: #fae3e5;
+  background-color: transparent;
+  transition: 0.5s linear;
+  letter-spacing: 1px;
+}
+
+.formularioCliente input:focus {
+  border-bottom: 2px solid #ffa500;
+  caret-color: #ffa500;
+  color: #ffa500;
+  font-family: monospace;
+}
+
+.formularioCliente input:focus::placeholder {
+  color: #ffa500;
+}
+
+.field-subtitulo {
+  position: relative;
+  padding: 2px;
+  margin-bottom: 0.3%;
+  margin-top: 0.2%;
+  border: 1px solid #e2293f;
+  color: #fae3e5;
+  text-shadow: 0px 0px 6.9px #ffa500, 0px 0px 13.8px #ffa500,
+    0px 0px 20.7px #ffa500, 0px 0px 27.6px #ffa500, 0px 0px 34.5px #ffa500,
+    0px 0px 41.4px #ffa500, 0px 0px 48.3px #ffa500;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-family: "GreatVictorian";
+  background-color: rgba(172, 25, 42, 0.08);
+}
+
+.field-subtitulo .spanPaparpadeo1 {
+  position: relative;
+  z-index: 1;
+  animation: parpadeoletrass 0.71s linear infinite;
+}
+
+.field-subtitulo .spanPaparpadeo2 {
+  position: relative;
+  z-index: 1;
+  animation: parpadeoletrass 2.2s linear infinite;
+}
+
+.field-subtitulo .spanPaparpadeo3 {
+  position: relative;
+  z-index: 1;
+  animation: parpadeoletrass 1.3s linear infinite;
+}
+
+.field-subtitulo .spanPaparpadeo4 {
+  position: relative;
+  z-index: 1;
+  animation: parpadeoletrass 1.8s linear infinite;
+}
+
+.field-subtitulo .spanPaparpadeo5 {
+  position: relative;
+  z-index: 1;
+  animation: parpadeoletrass 0.9s linear infinite;
+}
+
+@keyframes parpadeoletrass {
+  0% {
+    opacity: 1;
+    text-shadow: 0px 0px 6.9px #ffa500, 0px 0px 13.8px #ffa500,
+      0px 0px 20.7px #ffa500, 0px 0px 27.6px #ffa500, 0px 0px 34.5px #ffa500,
+      0px 0px 41.4px #ffa500, 0px 0px 48.3px #ffa500;
+  }
+  5% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+  15% {
+    opacity: 1;
+    text-shadow: 0px 0px 6.9px #ffa500, 0px 0px 13.8px #ffa500,
+      0px 0px 20.7px #ffa500, 0px 0px 27.6px #ffa500, 0px 0px 34.5px #ffa500,
+      0px 0px 41.4px #ffa500, 0px 0px 48.3px #ffa500;
+  }
+  20% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 1;
+    text-shadow: 0px 0px 6.9px #ffa500, 0px 0px 13.8px #ffa500,
+      0px 0px 20.7px #ffa500, 0px 0px 27.6px #ffa500, 0px 0px 34.5px #ffa500,
+      0px 0px 41.4px #ffa500, 0px 0px 48.3px #ffa500;
+  }
+  35% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 1;
+    text-shadow: 0px 0px 6.9px #ffa500, 0px;
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+.form-field {
+  padding-top: 1.4%;
+  color: #fae3e5;
+  display: flex;
+}
+
+#preguntaMesa {
+  padding-top: 4.7%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensajeNumeroMesas {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.form-field p {
+  display: inline-block;
+  text-align: left;
+  width: 20%;
+  font-family: "Cusivefont";
+}
+.form-field input {
+  width: 77%;
+  text-align: center;
+}
+
+/*Icono de calendario y fecha*/
+.form-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.form-field input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+#preguntaMesa p {
+  width: 70%;
+}
+.selectMesa {
+  width: 27%;
+  color: #fae3e5;
+  background-color: #04020a;
+  border: none;
+  text-align: left;
+  font-family: "Cusivefont";
+  box-shadow: 1px 1px 2px #e2293f;
+}
+.selectMesaOP {
+  width: auto;
+  background-color: #04020a;
+  color: #fae3e5;
+  border: none;
+  text-align: center;
+  font-family: "Cusivefont";
+  box-shadow: 1px 1px 2px #e2293f;
+}
+.selectMesa:hover,
+.selectMesaOP:hover {
+  color: #ffa500;
+}
+.selectMesa:focus,
+.selectMesaOP:focus {
+  outline: none;
+}
+
+.selectMesa option,
+.selectMesaOP option {
+  color: #ffa500;
+}
+
+.solicitarRedesSociales {
+  margin-top: 2%;
+  height: auto;
+  width: 100%;
+  height: 4.5%;
+  position: relative;
+  margin-bottom: 1.4%;
+}
+
+.solicitarRedesSociales p {
+  width: 100%;
+  color: #fae3e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solicitarRedesSociales .redMSJ {
+  margin-top: 2.4%;
+}
+
+.solicitarRedesSociales .redesSociales {
+  width: 100%;
+  display: flex;
+  margin-top: 3%;
+}
+.solicitarRedesSociales .redesSociales .fa {
+  height: 90%;
+  width: 7%;
+  text-align: center;
+  text-decoration: none;
+  color: #fae3e5;
+  padding: 0.1%;
+}
+
+.solicitarRedesSociales .redesSociales .inputFACE {
+  width: 57%;
+  height: 100%;
+}
+.solicitarRedesSociales .redesSociales .inputINSTA {
+  width: 37%;
+  height: 100%;
+}
+
+/*Check Box 2*/
+/* Estilo del checkbox */
+.form-check-input2[type="checkbox"] {
+  position: absolute;
+  width: 0%;
+}
+
+/* Estilo de la estrella */
+.starCheck2 {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  background-position: center;
+
+  background-color: #fae3e5;
+  cursor: pointer;
+}
+
+/* Estilo de la estrella cuando está marcado */
+.form-check-input2[type="checkbox"]:checked + .form-check-label2 .starCheck2 {
+  background-image: url("imagesResev/start.png");
+  background-color: transparent;
+}
+
+.form-field .aceptarTerminos {
+  position: relative;
+  padding-top: 2%;
+  width: 65%;
+  display: flex;
+  text-align: left;
+  height: auto;
+  font-family: "Cusivefont";
+}
+.form-field .aceptarTerminos .aceptarTerminos1 {
+  width: 67%;
+  height: auto;
+  display: inline-block;
+}
+.form-field .aceptarTerminos .aceptarTerminos2 {
+  width: 15.5%;
+  height: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.form-field .aceptarTerminos .aceptarTerminos2 .verTerminos {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  border: none;
+  background-image: url(imagesResev/pregunta.png);
+  background-size: 50% 75%;
+  cursor: pointer;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.form-field .aceptarTerminos .aceptarTerminos3 {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-field .BTNreservar {
+  width: 32%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Boton reservacion */
+
+.glitchbuttonRev,
+.BTNreservar::after {
+  position: relative;
+  width: 90px;
+  height: auto;
+  font-size: 16px;
+  background-image: linear-gradient(to left, rgb(31, 0, 31), #35000d);
+
+  text-shadow: 0px 0px 5px #e2293f;
+  border-top: 1px solid #e2293f;
+  border-bottom: 2px solid #e2293f;
+  border-left: 0.8px solid #e2293f;
+  border-right: 0.8px solid #e2293f;
+  box-shadow: 1px 0.5px 2.5px #dd4371;
+
+  border-radius: 3px;
+  color: #fae3e5;
+  outline: transparent;
+  cursor: pointer;
+  margin: 0 auto;
+  font-family: "Cusivefont";
+}
+
+.glitchbuttonRev::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "Reservar";
+  border-top: 0.5px solid #ac192a;
+  border-bottom: 1px solid #ac192a;
+  background-image: linear-gradient(to left, #35000d, rgb(31, 0, 31));
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  clip-path: var(--slice-0);
+}
+.glitchbuttonRev:hover::after {
+  animation: glitch 1s steps(2, end);
+}
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+.seleccionMesa {
+  background-image: url(imagesResev/mesasfondo.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.seleccionMesa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+}
+
+.Imagenesmesas {
+  position: relative;
+  width: 100%;
+}
+
+.mesaTitulo1 {
+  font-family: "Cusivefont", cursive;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 7%;
+  background-image: radial-gradient(ellipse 30% 70%, #e2293f, transparent);
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fae3e5;
+  text-shadow: 0 0 0.1rem #fae3e5, 0 0 0.3rem #dd4371,
+    -0.05rem 0.025rem 0.3rem #dd4371, 0.05rem 0.025rem 0.3rem #dd4371,
+    0 -0.125rem 0.5rem #e2293f, 0 0.125rem 0.75rem #e2293f;
+}
+
+.mesaTitulo1 .spaceTU {
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.AreaUsableMesas {
+  display: block;
+  width: 99%;
+  height: 99%;
+  margin-top: 1%;
+  flex-direction: column;
+}
+
+.areaArriba {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+}
+
+.Areaabajo {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  background-color: transparent;
+}
+
+.Areaabajoderecho {
+  display: flex;
+  width: 48%;
+  background-color: transparent;
+  height: 100%;
+  flex-direction: column;
+}
+
+.Areaabajoderechobottom {
+  width: 100%;
+  background-color: transparent;
+  height: 50%;
+}
+
+.Areaabajoderechotop {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+.Area01 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 15%;
+  height: 85%;
+  background-image: none;
+  position: relative;
+  margin-right: 1%;
+}
+
+.Area02 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 35%;
+  height: 85%;
+  background-image: none;
+  position: relative;
+  margin-right: 5%;
+}
+
+.Area03 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 41%;
+  height: 85%;
+  background-image: none;
+  position: relative;
+}
+
+.Area04 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 45%;
+  height: 100%;
+  background-image: none;
+  position: relative;
+}
+
+.Area05 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 60%;
+  height: 100%;
+  background-image: none;
+  position: relative;
+  margin-right: 2%;
+}
+
+.Area06 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 40%;
+  height: 100%;
+  background-image: none;
+  position: relative;
+}
+
+.Area07 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #e2293f;
+  border-radius: 3%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgba(172, 25, 42, 0.05);
+
+  width: 100%;
+  height: 100%;
+  background-image: none;
+  position: relative;
+}
+
+.AreaEntrada {
+  height: 100%;
+  width: 5%;
+  background: transparent;
+  background-image: url(imagesResev/puerta.jpg);
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.MSJAreaSelec {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.estaSeleccionado {
+  display: block;
+  position: relative;
+  background-color: #ac192a;
+  color: #fae3e5;
+  border-radius: 3%;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+  font-family: "Cusivefont";
+}
+
+.cambiarfondo {
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(180, 25, 43, 0.6),
+    rgba(1, 12, 43, 0.6)
+  );
+  background-size: 240% 240%;
+  animation: gradientFONDOresv 1s infinite;
+}
+
+.divMesaselect {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  color: #fae3e5;
+  display: inline-block;
+  font-family: "Cusivefont";
+  height: 10%;
+  width: 48px;
+}
+
+.divMesaselect p {
+  background-color: #ac192a;
+}
+
+.VisualizarArea {
+  background-image: url(imagesResev/ojo.png);
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  border-radius: 10%;
+  width: 55px;
+  height: 55px;
+  background-size: 100% auto;
+  background-position: center;
+  display: block;
+  align-content: center;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.quitarTitulo {
+  font-size: 0px;
+  color: transparent;
+}
+
+.quitarOjo {
+  display: none;
+}
+
+.botonDeMesa {
+  position: relative;
+  background-color: rgb(0, 0, 0, 0);
+
+  cursor: auto;
+  border: none;
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  margin-bottom: 1%;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MesaSeleccionada {
+  background-color: #e2293f;
+  background-image: none;
+  background-size: 100%;
+  transform: skew(-45deg) translateY(0%);
+  transition: transform 0s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  box-shadow: 0 0 1.05px rgba(172, 25, 42, 0.8),
+    0 0 4.25px rgba(172, 25, 42, 0.8), 0 0 8.5px rgba(172, 25, 42, 0.8),
+    0 0 17px rgba(172, 25, 42, 0.8);
+  width: 41px;
+  height: 25px;
+  top: 50%;
+  left: 25%;
+  transform-origin: bottom left;
+  transform: translate(-50%, -30%) skew(-45deg);
+
+  margin-top: 50%;
+}
+
+.MesaSeleccionada img {
+  background-size: cover;
+  transform: skew(46.5deg);
+  position: absolute;
+  margin-top: -70.5%;
+  margin-left: -90%;
+  border-style: none;
+  display: inline-block;
+  width: 130%;
+  height: auto;
+}
+
+.areaAbrir {
+  background-color: rgba(29, 29, 37, 0.3);
+  width: 100%;
+  height: 100%;
+  color: #fae3e5;
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.areaAbrir #cerrar {
+  background-color: transparent;
+  background-image: url(imagesResev/close.png);
+  background-size: 70% 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  width: 10%;
+  height: 10%;
+  border: none;
+  margin-left: 90%;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+.areaAbrir div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 65%;
+}
+
+.areaAbrir img {
+  width: relative;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fae3e5;
+}
+
+.aA1,
+.aA2,
+.aA3,
+.aA4,
+.aA5,
+.aA6,
+.aA7 {
+  display: none;
+}
+
+.MensajeDeEnvioReveracion1 {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  color: #fae3e5;
+  position: absolute;
+  display: none;
+  font-family: "Cusivefont";
+}
+
+.MensajeDeEnvioReveracion2 {
+  margin-top: 6%;
+  font-size: 23px;
+}
+
+.MensajeDeEnvioReveracion3 {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 1%;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.MensajeDeEnvioReveracion4 {
+  width: 60%;
+  height: 11%;
+  margin-left: 20%;
+  margin-top: 3%;
+  display: flex;
+}
+
+.MensajeDeEnvioReveracion2 h1 {
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #e2293f, 0 0 10px #ffa500, 0 0 98px #e2293f;
+  color: #fae3e5;
+  animation: parpadeoENVIOO 0.7s infinite;
+  font-family: "Sacramento";
+  font-size: 98px;
+}
+
+@keyframes parpadeoENVIOO {
+  0%,
+  20%,
+  24%,
+  55%,
+  100% {
+    color: #111;
+    text-shadow: none;
+  }
+  9%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  93% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #e2293f, 0 0 10px #ffa500, 0 0 98px #e2293f;
+    color: #fae3e5;
+  }
+}
+
+.MensajeDeEnvioReveracion4 .whatsapp {
+  width: 10%;
+  height: 100%;
+  margin-left: 45%;
+  background-position: center;
+  border: none;
+  border-radius: 6%;
+  display: none;
+}
+
+.MensajeDeEnvioReveracion4 .whatsapp {
+  background-image: url(imagesResev/whatsappboton.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.MensajeDeEnvioReveracion4 .whatsapp:hover {
+  scale: 1.05;
+}
+
+.selectMesaOP option {
+  display: block;
+}
+
+
+/*Cuando esta en una pantalla horizontal*/
+@media only screen and (min-width: 319px) and (max-width: 960px) and (orientation: landscape) {
+  /* mínimo de 319 píxeles hasta máximo de 960 píxeles.
+  solo aplica para horizontales -
+ */
+  @keyframes animatelineasB {
+    0% {
+      transform: translateY(215vh) scale(1);
+    }
+    100% {
+      transform: translateY(-10vh) scale(0.66);
+    } /*el-10vh es donde llegan*/
+  }
+
+  .card {
+  transition: 0.5s;
+  position: absolute;
+  width: 87.1%;
+  height: 82.1%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-shadow: -5px 5px 10px rgba(172, 25, 42, 0.1),
+    5px -5px 10px rgba(172, 25, 42, 0.1);
+  font-size: 15px;
+  }
+}
+
+
+/*Cuando esta en una pantalla vertical*/
+@media only screen and (min-width: 319px) and (max-width: 2000px) and (orientation: portrait) {
+  /* mínimo de 319 píxeles hasta máximo de 960 píxeles.
+  solo aplica para vertical -
+
+ */
+
+  @keyframes animatelineasB {
+    0% {
+      transform: translateY(215vh) scale(1);
+    }
+    100% {
+      transform: translateY(-10vh) scale(0.66);
+    } /*el-10vh es donde llegan*/
+  }
+
+  .card .lines::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300%;
+    height: 47.5vh;
+    background: linear-gradient(
+      transparent,
+      rgb(255, 127, 0),
+      rgb(255, 127, 0),
+      rgb(255, 127, 0),
+      transparent
+    );
+    animation: animatefondo001 7.7s linear infinite;
+  }
+
+  .card {
+    width: 80.5%;
+    height: 93.5%;
+  }
+
+  .fondocompleto {
+    content: " ";
+    inset: 3px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .datosCliente {
+    height: 65%;
+  }
+
+  .formularioCliente {
+    width: 63%;
+    padding-bottom: 6%;
+    padding-top: 6%;
+    margin-top: 7%;
+
+    margin-left: 13.875%;
+    border: 1px solid #e2293f;
+  }
+
+  .seleccionMesa {
+    margin-top: 4%;
+    height: 35%;
+  }
+}
+
+
+

@@ -1,0 +1,57 @@
+@media (max-width: 700px) {
+    /* Hacer la tabla responsiva */
+    #mitablaA,
+    #mitabla,
+    #mitablaC,
+    #tablaMesas,
+    #tablaSugerencias {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    #mitablaA td,
+    #mitablaA th,
+    #mitabla td,
+    #mitabla th,
+    #mitablaC td,
+    #mitablaC th,
+    #tablaMesas td,
+    #tablaMesas th,
+    #tablaSugerencias td,
+    #tablaSugerencias th {
+      white-space: normal;
+    }
+    
+    /* Permitir saltos de línea en la columna "Sugerencia" */
+    #tablaSugerencias td:nth-child(5) {
+      word-break: break-word;
+    }
+  }
+
+
+
+@media screen and (max-width: 576px) {
+    /* Ajusta el ancho de la tabla al 100% en pantallas pequeñas */
+            table {
+                width: 100%;
+            }
+            
+    /* Oculta las celdas que no son necesarias en pantallas pequeñas */
+            
+            #tablaMesas th:nth-child(1),
+            #tablaMesas td:nth-child(1){
+                display: none;
+            }
+
+            #tablaSugerencias th:nth-child(1),
+            #tablaSugerencias td:nth-child(1),
+            #tablaSugerencias th:nth-child(3),
+            #tablaSugerencias td:nth-child(3),
+            #tablaSugerencias th:nth-child(4),
+            #tablaSugerencias td:nth-child(4){
+                display: none;
+            }
+
+}   
+
+    
